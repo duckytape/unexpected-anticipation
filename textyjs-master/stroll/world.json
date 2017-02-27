@@ -1,0 +1,127 @@
+{
+    "title": "A Stroll in the Forest",
+    "greeting": "Welcome to A Stroll in the Forest!",
+    "creator": "Nathan Kunicki",
+    "player": {
+        "position": "clearing",
+        "inventory": {},
+        "attributes": {
+            "headache": true
+        }
+    },
+    "rooms": {
+        "clearing": {
+            "description": "As you open your eyes, you discover yourself surrounded by trees. You have a thumping headache and can't remember what happened before you passed out.",
+            "exits": {
+                "west": {
+                    "to": "river",
+                    "description": "to the river"
+                }
+            },
+            "objects": {
+                "campfire": 1,
+                "stick": 1
+            },
+            "npcs": [
+                "gnoll"
+            ]
+        },
+        "river": {
+            "description": "As you walk, you stumble across a small river. Despite it's size, you can see it's flowing quite rapidly and looks quite dangerous. Looking around, you can also see an underground hatch. It looks like it's been closed for decades.",
+            "exits": {
+                "east": {
+                    "to": "clearing",
+                    "description": "to the clearing"
+                },
+                "down": {
+                    "to": "hatch",
+                    "description": "into the hatch"
+                }
+            },
+            "objects": {}
+        },
+        "hatch": {
+            "instanced": true,
+            "description": "The entrance way to the hatch is dark and damp. It's hard to see what's around, but you can make out a couple of doorways - one to the west and one to the east.\r\n\r\nYou can just see the outline of a torch on the wall, though it isn't lit.",
+            "exits": {
+                "up": {
+                    "to": "river",
+                    "description": "through the hatch"
+                }
+            },
+            "objects": {
+                "torch": 1
+            },
+            "npcs": [
+                "gnoll"
+            ]
+        }
+    },
+    "objects": {
+        "campfire": {
+            "unique": true,
+            "attainable": false,
+            "description": "A small campfire, roaring away.",
+            "commands": {
+                "extinguish": {
+                    "holding": false,
+                    "module": "campfire",
+                    "method": "extinguishCampfire"
+                }
+            },
+            "attributes": {
+                "lit": true
+            }
+        },
+        "stick": {
+            "description": "A stick that's clearly broken off a tree.",
+            "commands": {
+                "break": {
+                    "holding": true,
+                    "module": "stick",
+                    "method": "breakStick"
+                },
+                "throw": {
+                    "holding": true,
+                    "module": "stick",
+                    "method": "throwStick"
+                }
+            }
+        },
+        "brokenstick": {
+            "description": "A broken piece of stick. It looks like it was once part of a larger stick."
+        },
+        "torch": {
+            "unique": true,
+            "description": "A wooden torch. It's not lit. Perhaps you should light it."
+        }
+    },
+    "npcs": {
+        "gnoll": {
+            "name": "Henry",
+            "description": ", a river gnoll",
+            "conversation": {
+                "say": "Hello traveller! And how are you this fine day?",
+                "you": [
+                    {
+                        "say": "I have a little bit of a headache at the moment, where am I?!",
+                        "them": {
+                            "say": "Well then, we should sort that out. You're down inside a hatch.",
+                            "you": [
+                                {
+                                    "say": "Right, thanks. I knew that already."
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "say": "I'm very well, please don't bother me with such pleasantries. Where am I?",
+                        "them": {
+                            "say": "Alright, don't be so snippy. You're inside a hatch."
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

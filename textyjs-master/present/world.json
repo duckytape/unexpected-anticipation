@@ -1,0 +1,371 @@
+	{
+		"title": "The Day",
+		"greeting": "Welcome to a house.",
+		"creator": "Ducky",
+		"player": {
+			"position": "porch",
+			"inventory": {},
+			"attributes": {
+				"anticipation": false,
+				"unexpectedness":false
+			}
+		},
+		"rooms": {
+			"porch": {
+				"description": "You find yourself on the porch of a house. The house itself looks like your typical american-dream-movie-style house. Probably about two stories with enough rooms and space for the middle class \"nuclear family\".The porch itself is bare of any unique decoration. It's surrounded by a slightly weathered white painted, wooden railings, and you find you're standing on wooden slats. The only thing that stands out is a banner across the front door, inviting you inside.",
+				"exits": {
+					"frontdoor": {
+						"to": "entryway",
+						"description": "Open the door into the house"
+					},
+					"porchstairs": {
+						"to": "quit",
+						"description": "Oh no, it looks like you want to leave. Type 'quit' to quit the game"}
+				},
+				"objects": {
+					"banner": 1
+				}
+			},
+			"entryway": {
+				"description": "You open the front door to a pleasant looking hallway. Picturesque landscapes line the walls to the left, and a decorative but rather loud carpet runs the length of the way.",
+				"exits": {
+					"reddoor": {
+						"to": "lounge",
+						"description": "to the lounge room"
+					},
+					"greendoor": {
+						"to": "dining",
+						"description": "to the dining room"
+					},
+					"yellowdoor": {
+						"to": "restroom",
+						"description": "to the restroom"
+					},
+					"bluedoor": {
+						"to": "kitchen",
+						"description": "to the kitchen"
+					},
+					"upstairs": {
+						"to": "upstairs",
+						"description": "up the stairs"
+					},
+					"backdoor": {
+						"to": "entryway",
+						"description": "It looks like it goes to the garden, but unfortunately it appears to be locked. Looks like you'll have to stay in the entryway"
+					},
+					"frontdoor": {
+						"to": "porch",
+						"description": "You're pretty sure there wasn't anything on the porch, but it's worth another look; maybe you dropped something?"
+					}
+				},
+				"objects": {
+					"hatrack": 1,
+					"umbrellastand": 1,
+					"mirror": 1,
+					"smalltable": 1
+				},
+				"npcs": [
+					"smallchild"
+				]
+			},
+			"lounge": {
+				"description": "A lovely lounge room; Perfect for hosting intimate tea parties or after dinner night caps.",
+				"exits": {
+					"entryway": {
+						"to": "entryway",
+						"description": "to the entryway"
+					},
+					"window": {
+						"to": "lounge",
+						"description": "Oh no, it appears to be locked. Well I guess it is a bit rude to exit through a window in a house."
+					}
+				},
+				"objects": {
+					"teacup": 2,
+					"teapot": 1,
+					"coffeetable": 1,
+					"armchair": 2,
+					"couch": 1
+				}
+			},
+			"dining": {
+				"description": "A dining room for the stereotypical western family evening meal. Complete with dining table, chairs, and a display case for all the finest crockery and silver.",
+				"exits": {
+					"greendoor": {
+						"to": "entryway",
+						"description": "back to the hallway"
+					},
+					"servingdoor": {
+						"to": "kitchen",
+						"description": "through to the kitchen"}
+				},
+				"objects": {
+					"displaycase": 1,
+					"fireplace": 1
+				},
+				"npcs": [
+					"perplexingperson"
+				]
+			},
+			"restroom": {
+				"description": "Every good house needs a toilet!",
+				"exits": {
+					"yellowdoor": {
+						"to": "entryway",
+						"description": "back to the hallway"
+					}
+				},
+				"objects": {
+					"soap": 1
+				}
+			},
+			"kitchen": {
+			   "description": "An excellently equipped, though kitsch, kitchen. The perfect place to bake a cake!",
+			   "exits": {
+					"servingdoor": {
+						"to": "kitchen",
+						"description": "to the dining room"
+					},
+					"bluedoor": {
+						"to": "entryway",
+						"description": "to the entryway"}
+				},
+				"objects": {
+					"fryingpan": 1,
+					"cake": 1
+				},
+				"npcs": [
+					""
+				]
+			},
+			"upstairs": {
+				"description": "",
+				"exits": {
+					"downstairs": {
+						"to": "entryway",
+						"description": "downstairs to the hallyway"
+					},
+					"purpledoor": {
+						"to": "masterbedroom",
+						"description": "through to the master bedroom"
+					},
+					"pinkdoor": {
+						"to": "bathroom",
+						"description": "to the bathroom"
+					},
+					"orangedoor": {
+						"to": "bedroom",
+						"description": "to the bedroom"}
+				},
+				"objects": {
+					"usedtowel": 1
+				},
+				"npcs": [
+					""
+				]
+			},
+			"masterbedroom": {
+				"description": "",
+				"exits": {
+					"purpledoor": {
+						"to": "upstairs",
+						"description": "to the upstairs landing"
+					}
+				},
+				"objects": {
+					"fourposter": 1,
+					"wardrobe": 1,
+					"vanity": 1
+				},
+				"npcs": [
+					"gnoll"
+				]
+			},
+			"bedroom": {
+				"description": "",
+				"exits": {
+					"orangedoor": {
+						"to": "upstairs",
+						"description": "to the upstairs landing"
+					}
+				},
+				"objects": {
+					"teddybear": 5,
+					"legos": 3
+				},
+				"npcs": [
+					"gnoll"
+				]
+			},
+			"bathroom": {
+				"description": "It's hard to see through the steam, and it sounds like the shower is going. You begin to think someone just left it on until some of the steam clears and you see the silhouette of someone showering!",
+				"exits": {
+					"pinkdoor": {
+						"to": "entryway",
+						"description": "to the upstairs landing"
+					}
+				},
+				"objects": {
+					"towel": 2,
+					"toothbrush": 3,
+					"showercap": 2
+				},
+				"npcs": [
+					"showeringperson"
+				]
+			}
+		},
+		"objects": {
+			"fireplace": {
+				"unique": true,
+				"attainable": false,
+				"description": "A dark fireplace, with a small fire crackling.",
+				"commands": {
+					"extinguish": {
+						"module": "diningroom",
+						"method": "extinguishFireplace"
+					}
+				},
+				"attributes": {
+					"lit": true
+				}
+			},
+			"hatrack": {
+				"unique": true,
+				"attainable": false,
+				"description": "A wooden hat rack, with four ornately carved hat arms to place hats. It looks a bit naked.",
+				"commands": {
+					"hanghat":{
+						"hats": false,
+						"module": "entryway",
+						"method": "addhat"
+					},
+					"takehat":{
+						"hats": true,
+						"module": "entryway",
+						"method": "takehat"
+					}
+				},
+				"attributes": {
+					"hats": false
+				}
+			},
+			"hat": {
+				"description": "A cute and colourful trilby."
+			},
+			"banner": {
+				"description": "You take a closer look at the banner. It seems to very excitedly say \"WELCOME {{player}}!\". It seems harmless and very friendly at least... maybe a little suspicious."
+			},
+			"teacup": {
+				"description": "A cute tea cup of fine china, decorated with a floral pattern and silver rim."
+			},
+			"teapot": {
+				"description": "A teapot large enough for several rounds of tea in the floral tea cups, also with a matching floral pattern."
+			},
+			"umbrellastand": {},
+			"smalltable": {},
+			"mirror": {},
+			"couch": {},
+			"armchair": {},
+			"coffeetable": {},
+			"standinglamp": {},
+			"displaycase": {
+				"description": "A large wooden display case, with glass door windows.",
+				"commands": {
+					"take from display": {
+						"open": true,
+						"plates": true,
+						"module": "diningroom",
+						"method": "takeFromDisplay"
+					}
+				},
+				"attributes": {
+					"plates": true
+				}
+			},		
+			"plate": {},
+			"bookcase": {
+				"description": "A large wooden book case.",
+				"commands": {
+					"takebook": {
+						"books": true,
+						"module": "upstairs",
+						"method": "takeBook"
+					}
+				},
+				"attributes": {
+					"books": true
+				}
+			},		
+			"books": {},
+			"teddybear": {},
+			"legos": {},
+			"soap": {},
+			"cake": {},
+			"biscuits": {},
+			"spatula": {},
+			"grater": {},
+			"woodenspoon": {},
+			"shampoo": {},
+			"lavendarsoap": {},
+			"toothbrush": {},
+			"showercap": {},
+			"wardrobe": {},
+			"towel": {},
+			"usedtowel": {},
+			"vanity": {},
+			"fourposter": {},
+			"fryingpan": {}
+		},
+		"npcs": {
+			"gnoll": {
+				"name": "Henry",
+				"description": ", a river gnoll",
+				"conversation": {
+					"say": "Hello traveller! And how are you this fine day?",
+					"you": [
+						{
+							"say": "I have a little bit of a headache at the moment, where am I?!",
+							"them": {
+								"say": "Well then, we should sort that out. You're down inside a hatch.",
+								"you": [
+									{
+										"say": "Right, thanks. I knew that already."
+									}
+								]
+							}
+						},
+						{
+							"say": "I'm very well, please don't bother me with such pleasantries. Where am I?",
+							"them": {
+								"say": "Alright, don't be so snippy. You're inside a hatch."
+							}
+						}
+					]
+				}
+			},
+			"smallchild": {
+				"name": "unknown child",
+				"description": " The child seems about 10 years old, with medium length hair, healthy skin and bright, but vaguely sleepy eyes.",
+				"conversation": {
+					"say": "Oh hi! I've been sitting here forever waiting for you, {{player}} Here take this",
+					"you": [
+						{
+							"say": "Wait... how do you know my name??",
+							"them": {
+								"say": "you told me, but that's not what is important right now..."
+							}
+						},
+						{
+							"say": "Why have you been waiting?",
+							"them": [
+								{
+									"say": ""
+								}
+							]
+						}
+					]
+				}
+		}
+	}
+}
